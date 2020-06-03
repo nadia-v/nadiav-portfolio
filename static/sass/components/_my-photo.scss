@@ -1,0 +1,14 @@
+.my-photo {
+    display: inline-block;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0 2rem 3rem rgba($color-black, .4);
+    transition: all .5s;
+    
+    &:hover {
+        transform: scale(1.2);
+        outline: .5rem solid rgba($color-eggplant, .5);
+        outline-offset: 1rem;
+    }
+}

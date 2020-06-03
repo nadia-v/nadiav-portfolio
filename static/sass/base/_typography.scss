@@ -1,0 +1,30 @@
+.heading-name {
+
+    font-size: 3rem;
+    font-weight: 400;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-grape, $color-eggplant);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: -1rem;
+}
+
+.heading-primary {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-grape, $color-eggplant);
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+}
+
+.heading-secondary {
+    font-size: $default-font-size;
+    font-weight: 700;
+}
+

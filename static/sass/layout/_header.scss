@@ -1,0 +1,49 @@
+
+.header {
+    grid-column: 1 / -1;
+    height: 95vh; 
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-shell, .8),
+        rgba($color-eggplant, .8)), 
+        url('/static/images/brick.jpg'); 
+    background-size: cover; 
+    background-position: top; 
+    position: relative; 
+
+    clip-path: polygon(0 20%, 30% 0, 100% 0, 100% 80%, 70% 100%, 0 100%);
+
+    &__text-box {
+        position: absolute; 
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        text-align: center; 
+    }
+
+
+    &__text {
+        color: $color-white;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        margin-bottom: 4rem;
+
+        &--main {
+            display: block;
+            line-height: 1.4;
+            font-size: 6rem;
+            font-weight: 400;
+            letter-spacing: 1rem;
+            animation: spreadInAndOut 4s ease-in-out;
+        }
+
+        &--sub {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: .2rem;
+            animation: dropDown 2s ease-in-out 3.5s;
+            animation-fill-mode: backwards;
+        }
+    }
+}
