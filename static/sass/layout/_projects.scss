@@ -1,42 +1,84 @@
 .projects {
     grid-column: full-start / full-end;
-    background-color: violet;
+    background-color: $color-secondary;
     padding: 5rem;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 8rem;
     justify-items: center;
 
     &__heading {
         grid-column: 1 / -1;
         text-align: center;
-        background-color: blue;
+        background-color: $color-secondary;
     }
 }
+
+// .project {
+//     display: grid;
+//     grid-template-rows: repeat(6, 1fr);
+//     //grid-row-gap: 1.5rem;
+//     justify-items: center;
+//     align-items: center;
+
+//     background-color: yellowgreen;
+//     padding-bottom: 2rem;
+//     border-radius: 2px;
+//     overflow: hidden;
+//     box-shadow: 0 2rem 3rem rgba($color-black, .4);
+//     transition: all .2s;
+
+//     &:hover {
+//         transform: scale(1.1);
+//         box-shadow: 0 3rem 5rem rgba($color-black, .5);
+//         outline: .2rem solid rgba($color-primary, .5);
+//         outline-offset: 1rem;
+//     }
+    
+//     &__image {
+//         width: 100%;
+//         grid-row: 1 / span 4;
+
+//         clip-path: polygon(0 0, 100% 0, 100% 80%, 40% 100%, 0 100%);
+//     }
+
+//     &__name {
+//         height: 100%;
+//         grid-row: 5 / 6;
+//     }
+
+//     &__btn {
+//         align-self: start;
+//     }
+// }
 
 .project {
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    //grid-template-columns: auto 1fr;
-    grid-row-gap: 1.5rem;
-    grid-column-gap: 2.5rem;
-    background-color: yellowgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
-    // height: 100%;
-    // width: 100%;
-    // background-color: yellowgreen;
-    // display: grid;
-    // grid-template-columns: repeat(6, 1fr);
-    // justify-items: center;
+    background-color: $color-secondary;
+    padding-bottom: 1rem;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 2rem 3rem rgba($color-black, .4);
+    transition: all .2s;
 
+    
     &__image {
         width: 100%;
-        grid-row: 1 / span 4;
+        
+        
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 40% 100%, 0 100%);
     }
 
-    &__name {
-        height: 100%;
-        grid-row: 5 / 6;
+    &__btn {
+       margin: 2rem auto; 
     }
 }
+
+
+
+

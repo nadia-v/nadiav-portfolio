@@ -17,84 +17,26 @@
 
 
     <body>
-        
-        <!-- HEADER -->
-        <!-- <header class="header">
-            <div class="header__text-box">
-                <div class="header__text">
-                    <span class="header__text--main">Welcome</span>
-                    <span class="header__text--sub">www.nadiavedeneyeva.com</span>
-                </div>
-            </div>
-        </header> -->
 
+        <!-- NAVIGATION -->
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle" value="unchecked">
 
-        <!-- ABOUT ME -->
-        <!-- <section class="section-about-me">
-            <div class="u-text-align-center u-margin-bottom-big">
-                <h2 class="heading-primary">
-                    About me
-                </h2>
-            </div>
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
 
-            <div class="row">
-                <div class="col-1-of-2">
-                    <h1 class="heading-name">Nadia Vedeneyeva</h1>   
-                    <h2 class="heading-secondary u-margin-bottom-small">Software Engineer</h2>
-                    <p class="u-margin-bottom-small">I wrote my first “Hello World” in the summer of 2018 at Stevens Institute of Technology, 
-                        where I attained a Master’s Degree in Software Engineering. 
-                        During my time there I was introduced to several programing languages, databases, frameworks, processes, etc., 
-                        but that's all on my resume. What is not on my resume is that I am most passionate about Python. 
-                        Python is my go-to language and I am working on building a career as a back-end developer. <br>
-                    </p>
-                    <h3 class="heading-tertiary">Some fun facts about me…</h3>
-                    <p>
-                    -	I am trilingual (English, Russian, some Ukrainian)<br>
-                    -	I am “slightly” competitive<br>
-                    -	I am a proud owner to the best pooch in 11223 named Molly<br>
-                    -  I got sky diving and scuba diving under my belt<br>
-                    -	I am hoping someday to conquer one of the Seven Summits (I have my eye on Kilimanjaro) </p>
-                </div>
+            <div class="navigation__background">&nbsp;</div>
 
-                <div class="col-1-of-2 u-text-align-center">
-                    <img src="{% static 'images/my_photo.jpg' %}" alt="Nadia Vedeneyeva photo" class="my-photo">
-                </div>
-            </div>
-        </section> -->
-
-
-        <!-- PROJECTS -->
-        <!-- <section class="section-projects">
-            <div class="u-text-align-center u-margin-bottom-big">
-                <h2 class="heading-primary">
-                    Projects
-                </h2>
-            </div>
-
-            <div class="project">
-                <div class="project__card">
-                    <h1 class="a">1</h1>
-                    <h1 class="a">2</h1>
-                    <h1 class="a">3</h1>
-                    <h1 class="a">4</h1>
-                    <h1 class="a">5</h1>
-                    <h1 class="a">6</h1>
-                </div>
-            </div> -->
-
-<!-- 
-            <div class="project">
-            {% for project in projects.all %}
-                <div class="project__card">
-                    <img src="{{ project.image.url }}" alt="Project photo" class="projects__image">
-                    <p class="card__name">{{ project.name }}</p>
-                </div>
-            {% endfor %}
-            </div> -->
-        </section>
-
-  
-
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#about-me" class="navigation__link"><span>01</span>About Me</a></li>
+                    <li class="navigation__item"><a href="{% url 'home' %}#projects" class="navigation__link"><span>02</span>Projects</a></li>
+                    <li class="navigation__item"><a href="{% url 'home' %}#contact-me" class="navigation__link"><span>03</span>Contact Me</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Resume</a></li>
+                </ul>
+            </nav>
+        </div>
 
 
         <div class="container">
@@ -111,81 +53,127 @@
 
 
             <!-- ABOUT ME -->
-            <div class="about-me__heading">
+            <div class="about-me__heading" id="about-me">
                 <h2 class="heading-primary">ABOUT ME</h2>
             </div>
 
             <!-- About me content -->
             <div class="about-me">
-            <div class="about-me__content">
-                <h1 class="heading-name">Nadia Vedeneyeva</h1>   
-                <h2 class="heading-secondary u-margin-bottom-small">Software Engineer</h2>
-                <p class="about-me__content--text u-margin-bottom-small">I wrote my first “Hello World” in the summer of 2018 at Stevens Institute of Technology, 
-                    where I attained a Master’s Degree in Software Engineering. 
-                    During my time there I was introduced to several programing languages, databases, frameworks, processes, etc., 
-                    but that's all on my resume. What is not on my resume is that I am most passionate about Python. 
-                    Python is my go-to language and I am working on building a career as a back-end developer. <br>
-                </p>
-                <h3 class="about-me__content--text heading-tertiary">Some fun facts about me…</h3>
-                <p class="about-me__content--text">
-                -	I am trilingual (English, Russian, some Ukrainian)<br>
-                -	I am “slightly” competitive<br>
-                -	I am a proud owner to the best pooch in 11223 named Molly<br>
-                -  I got sky diving and scuba diving under my belt<br>
-                -	I am hoping someday to conquer one of the Seven Summits (I have my eye on Kilimanjaro) </p>
-            </div>
+                <div class="about-me__content">
+                    <h1 class="heading-name">Nadia Vedeneyeva</h1>   
+                    <h2 class="heading-secondary u-margin-bottom-small">Software Engineer</h2>
+                    <p class="about-me__content--text u-margin-bottom-small">I wrote my first “Hello World” in the summer of 2018 at Stevens Institute of Technology, 
+                        where I attained a Master’s Degree in Software Engineering. 
+                        During my time there I was introduced to several programing languages, databases, frameworks, processes, etc., 
+                        but that's all on my resume. What is not on my resume is that I am most passionate about Python. 
+                        Python is my go-to language and I am working on building a career as a back-end developer. <br>
+                    </p>
+                    <h3 class="about-me__content--text heading-tertiary">Some fun facts about me…</h3>
+                    <p class="about-me__content--text">
+                    -	I am trilingual (English, Russian, some Ukrainian)<br>
+                    -	I am “slightly” competitive<br>
+                    -	I am a proud owner to the best pooch in 11223 named Molly<br>
+                    -  I got sky diving and scuba diving under my belt<br>
+                    -	I am hoping someday to conquer one of the Seven Summits (I have my eye on Kilimanjaro) </p>
+                </div>
 
-            <!-- About me images -->
-            <div class="about-me__images">
-                <img src="{% static 'images/my_photo.jpg' %}" alt="Nadia Vedeneyeva photo" class="about-me__images--1"> 
-            </div>
+                <!-- About me images -->
+                <div class="about-me__images">
+                    <img src="{% static 'images/my_photo.jpg' %}" alt="Nadia Vedeneyeva photo" class="about-me__images--1"> 
+                </div>
             </div>
 
 
 
             <!-- PROJECTS -->
-            <div class="projects__heading">
+            <div class="projects__heading" id="projects">
                 <h2 class="heading-primary">PROJECTS</h2>
             </div>
+
             <div class="projects">
                 {% for project in projects.all %}
                 <div class="project">
                     <img src="{{ project.image.url }}" alt="Project photo" class="project__image">
                     <h2 class="project__name heading-name">{{ project.name }}</h2>
+                    <a href="{% url 'details' project.id %}" class="btn project__btn">Learn more</a>
                 </div>
+
+
                 {% endfor %}
             </div>
 
-            <!-- <div class="projects__heading">
-                    <h2 class="heading-primary">PROJECTS</h2>
-                </div>
-                <div class="projects">
-                    {% for project in projects.all %}
-                    <div class="project">
-                        <div class="project__side project__side--front">
-                            <img src="{{ project.image.url }}" alt="Project photo" class="project__image">
-                            <h2 class="project__name heading-name">{{ project.name }}</h2>
-                        </div>
-
-                        <div class="project__side project__side--back">
-                            <div class="project__cta">
-                                <div class="project__details">
-                                    <p class="project__details--text">{{ project.details }}</p>
-                                </div>
-                                <a href="#" class="project__btn">Learn more</a>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div> -->
-
 
             <!-- CONTACT ME -->
-            <div class="contact-me">
-                Contact me
+
+            <div class="contact-me__heading" id="contact-me">
+                <h2 class="heading-primary">CONTACT ME</h2>
             </div>
 
+            <div class="contact-me">
+                
+                <!-- Contact me links -->
+                <div class="contact-me__links">
+                    <!-- email -->
+                    <a href="mailto:nadiaveden@gmail.com" class="contact-me__link">
+                        <svg class="contact-me__icon">
+                            <use xlink:href="{% static 'svg/sprite.svg' %}#email"></use>
+                        </svg>
+                        <span>Email</span>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/nadia-v" class="contact-me__link">
+                        <svg class="contact-me__icon">
+                            <use xlink:href="{% static 'svg/sprite.svg' %}#github" ></use>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/nadia-vedeneyeva-9396b1a9/" class="contact-me__link">
+                        <svg class="contact-me__icon">
+                            <use xlink:href="{% static 'svg/sprite.svg' %}#linkedin"></use>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+           
+
+                <!-- Contact me form -->
+                <form role="form" action="" method="POST" class="form">
+                    {% csrf_token %}
+                    <!-- Email -->
+                    <div class="form__group">
+                        <input type="email" class="form__input" id="email" placeholder="Enter email" name="sender">
+                        <label for="email" class="form__label">Email address</label>
+                    </div>
+                    <!-- Subject -->
+                    <div class="form__group">
+                        <input type="text" class="form__input" id="subject" placeholder="Subject" name="subject">
+                        <label for="subject" class="form__label">Subject</label>
+                    </div>
+                    <!-- Message -->
+                    <div class="form__group">
+                            <textarea type="text" class="form__input" id="message" placeholder="Your message" name="message"></textarea>
+                        <label for="message" class="form__label">Your message</label>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn--submit" id="submit">Submit</button>
+                </form>     
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="footer__text">
+                    Thank you for visiting
+                </div>
+            </footer>
+
         </div>
+
+    
+        
        
     </body>
 

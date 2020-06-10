@@ -9,4 +9,9 @@ from .models import Comment
 # Create your views here.
 def home(request):
     projects = Project.objects
+    
     return render(request, 'webpage/home.html', {'projects':projects})
+
+def details(request, project_id):
+    project_details = get_object_or_404(Project, pk=project_id)
+    return render(request, 'webpage/details.html', {'project': project_details})

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+{% load sass_tags %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/icon-font.css">
+    <link href="{% sass_src 'sass/main.scss' %}" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    
+    <title>Nadia Vedeneyeva</title>
+</head>
+
+<body>
+    <!-- POPUP -->
+
+    <div class="popup">
+
+        <div class="popup__content">
+            <!-- Popup images -->
+            <div class="popup__left">
+                <div class="popup__composition">
+                {% for d in project.pictures.all %}
+                    <img class="popup__img" src="{{ d.picture.url }}">
+                {% endfor %}
+                </div>
+            </div>
+
+            <!-- Popup text -->
+            <div class="popup__right">
+                <a href="{% url 'home' %}#projects" class="popup__close">&times;</a>
+                <div class="popup__text">
+                {% for d in project.details.all %}
+                    <h2 class="popup__text--name heading-name">{{ project.name }}</h2>
+                    <p class="popup__text--details">{{ d.details }}</p>
+                    <p class="popup__text--tech">{{ d.tech }}</p>
+                    <a href="{{ d.github }}" class="popup__text--link">{{ d.github }}</a>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

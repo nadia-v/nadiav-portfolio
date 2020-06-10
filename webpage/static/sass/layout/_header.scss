@@ -1,17 +1,27 @@
 
 .header {
     grid-column: 1 / -1;
-    height: 95vh; 
+    height: 115vh; 
+    // background-image: linear-gradient(
+    //     168.6deg, 
+    //     rgba(darken($color-primary, 10%), .9),
+    //     rgba(darken($color-secondary, 10%), .9) 76.4%,
+    //     rgba($color-white, 1) 76.5%,
+    //     rgba($color-white, 1) 100%), 
+    //     url('/static/images/2_brick.jpg');
     background-image: linear-gradient(
-        to right bottom, 
-        rgba($color-shell, .8),
-        rgba($color-eggplant, .8)), 
-        url('/static/images/brick.jpg'); 
+        168.6deg, 
+        rgba(darken($color-primary, 10%), .9),
+        rgba(darken($color-secondary, 10%), .9)),
+     
+        url('/static/images/2_brick.jpg');
+
     background-size: cover; 
-    background-position: top; 
+    background-position: bottom; 
     position: relative; 
 
-    clip-path: polygon(0 20%, 30% 0, 100% 0, 100% 80%, 70% 100%, 0 100%);
+    //clip-path: polygon(0 20%, 30% 0, 100% 0, 100% 80%, 70% 95%, 0 95%);
+    //clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
 
     &__text-box {
         position: absolute; 
