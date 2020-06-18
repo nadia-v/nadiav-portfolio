@@ -69,8 +69,8 @@
 .container {
     width: 100%;
     display: grid;
-    grid-template-rows: 115vh auto minmax(85vh, min-content)
-                        auto minmax(85vh, min-content) auto minmax(85vh, min-content) 20rem;
+    //grid-template-rows: 115vh auto minmax(85vh, min-content)
+                    //auto minmax(85vh, min-content) auto minmax(85vh, min-content) 20rem;
 
     grid-template-columns: [full-start] minmax(6rem, 1fr) 
                         [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) 

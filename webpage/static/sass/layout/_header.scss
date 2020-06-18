@@ -2,26 +2,63 @@
 .header {
     grid-column: 1 / -1;
     height: 115vh; 
+    position: relative;
     // background-image: linear-gradient(
     //     168.6deg, 
     //     rgba(darken($color-primary, 10%), .9),
     //     rgba(darken($color-secondary, 10%), .9) 76.4%,
-    //     rgba($color-white, 1) 76.5%,
-    //     rgba($color-white, 1) 100%), 
+    //     rgba($color-accent, 1) 76.5%,
+    //     rgba($color-accent, 1) 100%), 
     //     url('/static/images/2_brick.jpg');
-    background-image: linear-gradient(
-        168.6deg, 
-        rgba(darken($color-primary, 10%), .9),
-        rgba(darken($color-secondary, 10%), .9)),
-     
-        url('/static/images/2_brick.jpg');
 
-    background-size: cover; 
-    background-position: bottom; 
-    position: relative; 
+    &__content {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(
+            168.6deg, 
+            rgba(darken($color-primary, 10%), .9),
+            rgba(darken($color-secondary, 10%), .9)),
+        
+            url('/static/images/2_brick.jpg');
 
-    //clip-path: polygon(0 20%, 30% 0, 100% 0, 100% 80%, 70% 95%, 0 95%);
-    //clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+        background-size: cover; 
+        background-position: bottom; 
+    }
+
+
+    &__gradient {
+        height: 115vh;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: transparent;
+       
+        &--break {
+            height: 100%; 
+            width: 100%;
+            background-color: $color-accent;
+            clip-path: polygon(0 99.6%, 100% 60.6%, 100% 100%, 0 100%);
+            position: relative;
+    
+            &::after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: $color-secondary;
+                clip-path: polygon(0 100%, 100% 61%, 100% 100%, 0 100%);
+            }
+        }
+    }
+
 
     &__text-box {
         position: absolute; 
@@ -33,7 +70,7 @@
 
 
     &__text {
-        color: $color-white;
+        color: $color-accent;
         text-transform: uppercase;
         backface-visibility: hidden;
         margin-bottom: 4rem;

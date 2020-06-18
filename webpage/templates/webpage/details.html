@@ -17,29 +17,30 @@
 </head>
 
 <body>
-    <!-- POPUP -->
+    <!-- project-details -->
 
-    <div class="popup">
+    <div class="details">
 
-        <div class="popup__content">
-            <!-- Popup images -->
-            <div class="popup__left">
-                <div class="popup__composition">
+        <div class="project-details">
+            <!-- project-details images -->
+            <div class="project-details__left">
                 {% for d in project.pictures.all %}
-                    <img class="popup__img" src="{{ d.picture.url }}">
-                {% endfor %}
+                <div class="project-details__composition">
+                    <img class="project-details__composition--img" src="{{ d.picture.url }}">
+                    <span class="project-details__composition--text">{{ d.screenshot_description }}</span>
                 </div>
+                {% endfor %}
             </div>
 
-            <!-- Popup text -->
-            <div class="popup__right">
-                <a href="{% url 'home' %}#projects" class="popup__close">&times;</a>
-                <div class="popup__text">
-                {% for d in project.details.all %}
-                    <h2 class="popup__text--name heading-name">{{ project.name }}</h2>
-                    <p class="popup__text--details">{{ d.details }}</p>
-                    <p class="popup__text--tech">{{ d.tech }}</p>
-                    <a href="{{ d.github }}" class="popup__text--link">{{ d.github }}</a>
+            <!-- project-details text -->
+            <div class="project-details__right">
+                <a href="{% url 'home' %}#projects" class="project-details__close">&times;</a>
+                <div class="project-details__text">
+                    {% for d in project.details.all %}
+                    <h2 class="project-details__text--name heading-name">{{ project.name }}</h2>
+                    <p class="project-details__text--details">{{ d.details }}</p>
+                    <p class="project-details__text--tech">{{ d.tech }}</p>
+                    <a href="{{ d.github }}" class="project-details__text--link">{{ d.github }}</a>
                 {% endfor %}
                 </div>
             </div>

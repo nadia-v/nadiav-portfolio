@@ -8,6 +8,8 @@
         
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
+        <script src="{% static 'js/navi.js' %}"></script> 
+
         <link rel="stylesheet" href="css/icon-font.css">
         <link href="{% sass_src 'sass/main.scss' %}" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
@@ -20,8 +22,8 @@
 
         <!-- NAVIGATION -->
         <div class="navigation">
+            
             <input type="checkbox" class="navigation__checkbox" id="navi-toggle" value="unchecked">
-
             <label for="navi-toggle" class="navigation__button">
                 <span class="navigation__icon">&nbsp;</span>
             </label>
@@ -30,11 +32,19 @@
 
             <nav class="navigation__nav">
                 <ul class="navigation__list">
+
+                    <input type="checkbox"  class="navigation__checkbox" id="navi-toggle-2" value="checked">   
+                    <li class="navigation__item">
+                        <label for="navi-toggle-2">Lable</label>
+                    </li>
+                    
+                          
                     <li class="navigation__item"><a href="#about-me" class="navigation__link"><span>01</span>About Me</a></li>
                     <li class="navigation__item"><a href="{% url 'home' %}#projects" class="navigation__link"><span>02</span>Projects</a></li>
                     <li class="navigation__item"><a href="{% url 'home' %}#contact-me" class="navigation__link"><span>03</span>Contact Me</a></li>
                     <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Resume</a></li>
                 </ul>
+           
             </nav>
         </div>
 
@@ -43,11 +53,16 @@
 
             <!-- HEADER -->
             <header class="header">
-                <div class="header__text-box">
-                    <div class="header__text">
-                        <span class="header__text--main">Welcome</span>
-                        <span class="header__text--sub">www.nadiavedeneyeva.com</span>
+                <div class="header__content">
+                    <div class="header__text-box">
+                        <div class="header__text">
+                            <span class="header__text--main">Welcome</span>
+                            <span class="header__text--sub">www.nadiavedeneyeva.com</span>
+                        </div>
                     </div>
+                </div>
+                <div class="header__gradient">
+                    <div class="header__gradient--break">&nbsp;</div>
                 </div>
             </header>
 
@@ -82,6 +97,9 @@
                     <img src="{% static 'images/my_photo.jpg' %}" alt="Nadia Vedeneyeva photo" class="about-me__images--1"> 
                 </div>
             </div>
+            <div class="about-me__gradient">
+                <div class="about-me__gradient--break">&nbsp;</div>
+            </div>
 
 
 
@@ -100,6 +118,9 @@
 
 
                 {% endfor %}
+            </div>
+            <div class="projects__gradient">
+                <div class="projects__gradient--break">&nbsp;</div>
             </div>
 
 
@@ -171,10 +192,7 @@
             </footer>
 
         </div>
-
-    
-        
-       
+ 
     </body>
 
 </html>

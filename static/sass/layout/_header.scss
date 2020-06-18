@@ -1,25 +1,27 @@
 
 .header {
-    //grid-column: 2 / span 8;
     grid-column: 1 / -1;
     height: 115vh; 
     // background-image: linear-gradient(
-    //     to right bottom, 
-    //     rgba($color-primary, .9),
-    //     rgba($color-secondary, .9)), 
-    //     url('/static/images/2_brick.jpg'); 
+    //     168.6deg, 
+    //     rgba(darken($color-primary, 10%), .9),
+    //     rgba(darken($color-secondary, 10%), .9) 76.4%,
+    //     rgba($color-accent, 1) 76.5%,
+    //     rgba($color-accent, 1) 100%), 
+    //     url('/static/images/2_brick.jpg');
     background-image: linear-gradient(
-        170deg, 
-        rgba($color-primary, .9),
-        rgba($color-secondary, .9) 95%,
-        rgba($color-secondary, 1) 100%), 
+        168.6deg, 
+        rgba(darken($color-primary, 10%), .9),
+        rgba(darken($color-secondary, 10%), .9)),
+     
         url('/static/images/2_brick.jpg');
+
     background-size: cover; 
-    background-position: top; 
+    background-position: bottom; 
     position: relative; 
 
     //clip-path: polygon(0 20%, 30% 0, 100% 0, 100% 80%, 70% 95%, 0 95%);
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    //clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
 
     &__text-box {
         position: absolute; 
@@ -31,7 +33,7 @@
 
 
     &__text {
-        color: $color-white;
+        color: $color-accent;
         text-transform: uppercase;
         backface-visibility: hidden;
         margin-bottom: 4rem;
