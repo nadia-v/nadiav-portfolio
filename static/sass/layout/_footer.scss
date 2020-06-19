@@ -1,13 +1,14 @@
 .footer {
     grid-column: 1 / -1;
-    height: 40vh;
+    height: 20vh;
     position: relative;
-    background-image: linear-gradient(
-        to bottom, 
-        rgba(darken($color-primary, 10%), .9),
-        rgba(darken($color-secondary, 10%), .9) 50%,
-        rgba(darken($color-primary, 10%), .9)), 
-        url('/static/images/2_brick.jpg');
+    background-color: darken($color-secondary, 15%);
+    // background-image: linear-gradient(
+    //     to bottom, 
+    //     rgba(darken($color-primary, 10%), .9),
+    //     rgba(darken($color-secondary, 10%), .9) 50%,
+    //     rgba(darken($color-primary, 10%), .9)), 
+    //     url('/static/images/2_brick.jpg');
     background-size: cover;
 
     
@@ -19,8 +20,8 @@
         display: block;
         color: $color-accent;
         text-transform: uppercase;
-        font-size: 3rem;
-        font-weight: 400;
+        font-size: 1.5rem;
+        font-weight: 300;
         letter-spacing: .4rem;
         transform: translate(-50%, -50%);
     }

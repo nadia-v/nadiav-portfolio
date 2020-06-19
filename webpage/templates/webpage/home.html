@@ -8,14 +8,19 @@
         
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-        <script src="{% static 'js/navi.js' %}"></script> 
-
-        <link rel="stylesheet" href="css/icon-font.css">
-        <link href="{% sass_src 'sass/main.scss' %}" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{% static 'js/navi.js' %}">
+        
+        <link href="{% sass_src 'sass/main.scss' %}" rel="stylesheet" type="text/css" />
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>Nadia Vedeneyeva</title>
     </head>
+
+    <script>
+        function myFunction() {
+            document.getElementById("navi-toggle").checked = false;
+        }
+    </script>
 
 
     <body>
@@ -31,18 +36,19 @@
             <div class="navigation__background">&nbsp;</div>
 
             <nav class="navigation__nav">
-                <ul class="navigation__list">
-
-                    <input type="checkbox"  class="navigation__checkbox" id="navi-toggle-2" value="checked">   
-                    <li class="navigation__item">
-                        <label for="navi-toggle-2">Lable</label>
+                <ul class="navigation__list">                       
+                    <li class="navigation__item">    
+                        <a href="#about-me" class="navigation__link" onclick="myFunction()"><span>01</span>About Me</a>   
                     </li>
-                    
-                          
-                    <li class="navigation__item"><a href="#about-me" class="navigation__link"><span>01</span>About Me</a></li>
-                    <li class="navigation__item"><a href="{% url 'home' %}#projects" class="navigation__link"><span>02</span>Projects</a></li>
-                    <li class="navigation__item"><a href="{% url 'home' %}#contact-me" class="navigation__link"><span>03</span>Contact Me</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Resume</a></li>
+                    <li class="navigation__item">
+                        <a href="{% url 'home' %}#projects" class="navigation__link" onclick="myFunction()"><span>02</span>Projects</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="{% url 'home' %}#contact-me" class="navigation__link" onclick="myFunction()"><span>03</span>Contact Me</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link" onclick="myFunction()"><span>04</span>Resume</a>
+                    </li>
                 </ul>
            
             </nav>
