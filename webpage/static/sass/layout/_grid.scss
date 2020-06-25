@@ -78,5 +78,7 @@
 
     // grid-template-columns: [full-start] 3rem 
     //                         [center-start] repeat(8, minmax(10vw, 1fr)) [center-end] 3rem [full-end]
+
+    grid-row-gap: 0;
 }
 

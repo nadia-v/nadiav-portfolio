@@ -17,10 +17,13 @@
 </head>
 
 <body>
+    <!-- close icon -->
+    <div class="close-icon">
+        <a href="{% url 'home' %}#projects" class="close-icon__link">&times;</a>
+    </div>
+    
     <!-- project-details -->
-
     <div class="details">
-
         <div class="project-details">
             <!-- project-details images -->
             <div class="project-details__left">
@@ -34,7 +37,7 @@
 
             <!-- project-details text -->
             <div class="project-details__right">
-                <a href="{% url 'home' %}#projects" class="project-details__close">&times;</a>
+                <!-- <a href="{% url 'home' %}#projects" class="project-details__close">&times;</a> -->
                 <div class="project-details__text">
                     {% for d in project.details.all %}
                     <h2 class="project-details__text--name heading-name">{{ project.name }}</h2>

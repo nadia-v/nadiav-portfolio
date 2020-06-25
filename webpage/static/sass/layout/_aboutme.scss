@@ -1,17 +1,21 @@
 .about-me {
     grid-column: 1 / -1;  
-    padding-top: 5rem; 
-    padding-bottom: 5rem;
-
+    padding: 5rem 15rem;
     background-color: $color-secondary;
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-gap: 2rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        padding: 7rem 15rem;
+        grid-template-columns: 1fr;
+        grid-gap: 8rem;
+    }
     
     &__heading {
-
         grid-column: 1 / -1;
         text-align: center;
-
         background-color: $color-secondary;
     }
 
@@ -20,6 +24,10 @@
         height: 46vh;
         width: 100%;
         background-color: $color-secondary;
+
+        @media only screen and (max-width: $bp-small) {
+            height: 25vh;
+        }
 
        
         &--break {
@@ -44,15 +52,19 @@
     }
 
     &__content {
-        padding-top: 1rem;
-        padding-left: 15rem;
+        //padding-top: 1rem;
+        //padding-left: 15rem;
+        font-size: $default-font-size;
+        color: $color-grey-light;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-        &--text {
-            font-size: 1.2rem;
+
+        &--bold {
+            font-size: 2rem;
+            font-weight: 700; 
         }
     }
 
@@ -61,22 +73,37 @@
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: repeat(6, 1fr);
         align-items: center;    // Picture centered vertically
+        justify-items: end; //Picture is moved all the way to the right
+
+        @media only screen and (max-width: $bp-largest) {
+            justify-items: center;
+        }
 
         &--1 {
             width: 70%;
-            grid-row: 2 / 6;
-            grid-column: 3 / 6;
+            grid-row: 1 / -1;
+            grid-column: 1 / -1;
 
-            border-radius: 2px;
-            //border-radius: 50%;
-            //box-shadow: 0 2rem 3rem rgba($color-black, .4);
+            border-radius: 3px;
             transition: all .2s;
+
+            @media only screen and (max-width: $bp-largest) {
+                width: 60%;
+            }
 
             &:hover {
                 transform: scale(1.4);
                 outline: .2rem solid rgba($color-accent, .5);
                 box-shadow: 0 3rem 5rem rgba($color-black, .5);
                 outline-offset: 1rem;
+
+                @media only screen and (max-width: $bp-largest) {
+                    transform: scale(1.2);
+                }
+
+                @media only screen and (max-width: $bp-largest) {
+                    transform: scale(1.1);
+                }
             }
         }
     }

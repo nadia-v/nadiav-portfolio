@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+{% load sass_tags %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/icon-font.css">
+    <link href="{% sass_src 'sass/main.scss' %}" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    
+    <title>Nadia Vedeneyeva</title>
+</head>
+
+<script>
+    function myFunction() {
+        document.getElementById("navi-toggle").checked = false;
+    }
+</script>
+
+<body>
+    <!-- NAVIGATION -->
+    <div class="navigation">
+    
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle" value="unchecked">
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">                       
+                    <li class="navigation__item">    
+                        <a href="{% url 'home' %}#about-me" class="navigation__link" onclick="myFunction()"><span>01</span>About Me</a>   
+                    </li>
+                    <li class="navigation__item">
+                        <a href="{% url 'home' %}#projects" class="navigation__link" onclick="myFunction()"><span>02</span>Projects</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="{% url 'home' %}#contact-me" class="navigation__link" onclick="myFunction()"><span>03</span>Contact Me</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="{% url 'resume' %}" class="navigation__link" onclick="myFunction()"><span>04</span>Resume</a>
+                    </li>
+                </ul>
+            
+            </nav>
+        </div>
+
+
+    <!-- <embed src="{% static 'images/resume_06.19.2020.pdf' %}" type="application/pdf" width="100%" height="1200px" /> -->
+    <!-- <object data="{% static 'images/resume_06.19.2020.pdf' %}" type="application/pdf" style="min-height:100vh;width:100%"></object> -->
+    <div class="resume">
+        <object data="{% static 'images/resume.pdf' %}" type="application/pdf" style="width: 100%; height: 100%; display: block;"></object>
+    </div>
+</body>
+</html>

@@ -2,6 +2,7 @@
     grid-column: full-start / full-end;
     background-color: $color-tertiary;
     padding-bottom: 10rem;
+    font-size: $default-font-size;
 
 
     &__heading {
@@ -30,7 +31,7 @@
 
     &__link:hover {
         transform: scale(1.2);
-        text-shadow: 0 .5rem 1rem rgba($color-primary, .2);
+        text-shadow: 0 .5rem 1rem rgba($color-primary, .7);
     }
     
     &__link:active {
@@ -45,7 +46,7 @@
     }
 
     &__icon:hover {
-        filter: drop-shadow(0 .5rem 1rem rgba($color-primary, .2)); 
+        filter: drop-shadow(0 .5rem 1rem rgba($color-black, .3)); 
     }
 
     &__icon:active {
@@ -64,7 +65,7 @@
     }
 
     &__input {
-        font-size: 1.5rem;
+        font-size: $default-font-size;
         font-family: inherit;
         color: inherit;
         padding: 1.5rem 2rem;
@@ -81,10 +82,11 @@
             outline: none;
             box-shadow: 0 1rem 2rem rgba($color-black, .1);
             border-bottom: 3px solid $color-accent;
+            background-color: rgba(white, .7);
         }
 
         &:focus:invalid {
-            border-bottom: 3px solid $color-primary;
+            border-bottom: 3px solid darken($color-primary, 10%);
         }
 
         &::-webkit-input-placeholder {
@@ -93,7 +95,7 @@
     }
 
     &__label {
-        font-size: 1.2rem;
+        font-size: $default-font-size;
         font-weight: 700;
         margin-left: 2rem;
         margin-top: .7rem;

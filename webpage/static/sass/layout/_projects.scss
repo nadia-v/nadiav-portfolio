@@ -21,6 +21,9 @@
         width: 100%;
         background-color: darken($color-primary, 5%);
 
+        @media only screen and (max-width: $bp-small) {
+            height: 25vh;
+        }
        
         &--break {
             height: 100%; 

@@ -47,7 +47,7 @@
                         <a href="{% url 'home' %}#contact-me" class="navigation__link" onclick="myFunction()"><span>03</span>Contact Me</a>
                     </li>
                     <li class="navigation__item">
-                        <a href="#" class="navigation__link" onclick="myFunction()"><span>04</span>Resume</a>
+                        <a href="{% url 'resume' %}" class="navigation__link" onclick="myFunction()"><span>04</span>Resume</a>
                     </li>
                 </ul>
            
@@ -89,13 +89,15 @@
                         but that's all on my resume. What is not on my resume is that I am most passionate about Python. 
                         Python is my go-to language and I am working on building a career as a back-end developer. <br>
                     </p>
-                    <h3 class="about-me__content--text heading-tertiary">Some fun facts about me…</h3>
+                    <p class="about-me__content--bold">Some fun facts about me…</p>
+                    <!-- <h3 class="about-me__content--text heading-tertiary">Some fun facts about me…</h3> -->
                     <p class="about-me__content--text">
                     -	I am trilingual (English, Russian, some Ukrainian)<br>
                     -	I am “slightly” competitive<br>
                     -	I am a proud owner to the best pooch in 11223 named Molly<br>
-                    -  I got sky diving and scuba diving under my belt<br>
-                    -	I am hoping someday to conquer one of the Seven Summits (I have my eye on Kilimanjaro) </p>
+                    -   I got sky diving and scuba diving under my belt<br>
+                    -	I am hoping someday to conquer one of the Seven Summits (I have my eye on Kilimanjaro) <br>
+                    -   During COVID-19 quarantine, in my otherwise silent neighborhood, I started and encouraged honoring frontline workers by making noise at 7pm</p>
                 </div>
 
                 <!-- About me images -->
@@ -167,7 +169,7 @@
            
 
                 <!-- Contact me form -->
-                <form role="form" action="" method="POST" class="form">
+                <form role="form" action="{% url 'contact' %}" method="POST" class="form">
                     {% csrf_token %}
                     <!-- Email -->
                     <div class="form__group">
@@ -187,7 +189,7 @@
 
                     <!-- Submit button -->
                     <button type="submit" class="btn btn--submit" id="submit">Submit</button>
-                </form>     
+                </form>   
             </div>
 
             <!-- FOOTER -->

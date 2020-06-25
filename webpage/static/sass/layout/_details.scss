@@ -1,0 +1,152 @@
+.close-icon {
+    position: fixed;
+    top: 4.5rem;
+    right: 5rem;
+    z-index: 100;
+
+    &__link {
+        &:link,
+        &:visited {
+            color: $color-accent;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+            line-height: 1;
+        }
+
+        &:hover {
+            color: lighten($color-secondary, 50%);
+        }
+    }
+}
+
+.details {
+    grid-column: 1 / -1;
+    min-height: 95vh; 
+    width: 100%;
+    background-image: linear-gradient(
+    168.6deg, 
+    rgba(darken($color-primary, 10%), .9),
+    rgba(darken($color-secondary, 10%), .9)),    
+    url('/static/images/2_brick.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+}
+
+.project-details {
+    width: 90%;
+    margin: 4rem auto;
+    background-color: darken($color-primary, 5%);
+    border-radius: 3px;
+    box-shadow: 0 3rem 4rem rgba($color-black, .7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+
+    &__left {
+        flex: 1 1 50%;
+        padding: 5%;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 24rem);
+        justify-content: center;
+
+        @media only screen and (max-width: $bp-small) {
+            order: 2;
+            grid-template-columns: 1fr;
+            grid-gap: 2rem;
+        }
+    }
+
+    
+    &__composition {
+        border-radius: 3px;
+        overflow: hidden;
+        width: 100%;
+        background-color: $color-primary;
+        box-shadow: 0 2rem 3rem rgba($color-black, .4);
+        transition: all .2s;
+        
+        transform: rotate(20deg);
+
+        @media only screen and (max-width: $bp-small) {
+            transform: rotate(0);
+        }
+        
+        &--img {
+            width: 100%;
+            display: block;
+        }
+        
+        &--text {
+            display: inline-block;
+            padding: .5rem;
+            color: $color-accent;  
+            font-weight: 300;
+        }
+        
+        &:hover {
+            transform: scale(2.2) translateX(4rem);
+            box-shadow: 0 3rem 4rem rgba($color-black, .5);
+            z-index: 20;
+
+            @media only screen and (max-width: $bp-largest) {
+                transform: scale(1.9) translateX(4rem);
+            }
+        }
+    }
+    
+    &__right {
+        flex: 1 1 50%;
+        padding: 5%;
+        font-size: $default-font-size;
+
+        @media only screen and (max-width: $bp-small) {
+            order: 1;
+        }
+    }
+
+    &__text {
+        height: 100%;
+        //padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        & > *:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+
+
+        &--name {
+            padding-bottom: 3rem;
+        }
+
+        &--tech {
+            color: $color-quaternary;
+        }
+
+        &--link {
+            &:link,
+            &:visited {
+                text-decoration: none;
+                color: $color-grey-dark;
+            }
+
+            &:hover {
+                color: $color-accent;
+            }
+        }
+    }
+}
