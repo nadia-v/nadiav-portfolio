@@ -28,6 +28,10 @@
     font-weight: 300;
     display: inline-block;
     color: $color-accent;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 4rem;
+    }
 }
 
 .heading-primary {
@@ -36,11 +40,19 @@
     letter-spacing: .2rem;
     display: inline-block;
     color: $color-accent;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 4.5rem;
+    }
 }
 
 .heading-secondary {
     font-size: 2.5rem;
     font-weight: 700;
     color: darken($color-primary, 5%);
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 3.5rem;
+    }
 }
 

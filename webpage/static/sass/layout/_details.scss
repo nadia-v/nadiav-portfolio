@@ -4,6 +4,11 @@
     right: 5rem;
     z-index: 100;
 
+    // @media only screen and (max-width: $bp-small) {
+    //     top: 6rem;
+    //     right: 7rem;
+    // }
+
     &__link {
         &:link,
         &:visited {
@@ -96,12 +101,16 @@
         }
         
         &:hover {
+            
             transform: scale(2.2) translateX(4rem);
             box-shadow: 0 3rem 4rem rgba($color-black, .5);
             z-index: 20;
 
             @media only screen and (max-width: $bp-largest) {
                 transform: scale(1.9) translateX(4rem);
+            }
+            @media only screen and (max-width: $bp-small) {
+                transform: scale(1) translateX(0);
             }
         }
     }
